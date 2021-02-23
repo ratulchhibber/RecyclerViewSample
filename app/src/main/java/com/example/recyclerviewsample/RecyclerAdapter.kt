@@ -28,8 +28,17 @@ class RecyclerAdapter(private var movieList: ArrayList<Movie>):
 
         init {
             itemView.setOnClickListener {
-                val snack = "Item position clicked: $adapterPosition"
-                Snackbar.make(itemView, snack, Snackbar.LENGTH_SHORT).show()
+                //   val snack = "Item position clicked: $adapterPosition"
+                Snackbar
+                        .make(itemView,
+                                "Sample snack bar message",
+                                Snackbar.LENGTH_INDEFINITE)
+                        .setAction("Click Me") {
+                            Snackbar
+                                    .make(itemView,
+                                            "You clicked the button on snack bar",
+                                            Snackbar.LENGTH_SHORT).show()
+                        }.show()
             }
         }
 

@@ -54,12 +54,12 @@ class RecyclerAdapter(private var movieList: ArrayList<Movie>):
                 //   val snack = "Item position clicked: $adapterPosition"
                 Snackbar
                         .make(itemView,
-                                "Sample snack bar message",
+                                "Movie name: ${ it.movieNameTextView.text }",
                                 Snackbar.LENGTH_INDEFINITE)
                         .setAction("Click Me") {
                             Snackbar
                                     .make(itemView,
-                                            "You clicked the button on snack bar",
+                                            "This is an odd numbered cell",
                                             Snackbar.LENGTH_SHORT).show()
                         }.show()
             }
@@ -78,12 +78,12 @@ class RecyclerAdapter(private var movieList: ArrayList<Movie>):
                 //   val snack = "Item position clicked: $adapterPosition"
                 Snackbar
                         .make(itemView,
-                                "Sample snack bar message",
+                                "Movie name: ${ it.movieNameTextView.text }",
                                 Snackbar.LENGTH_INDEFINITE)
                         .setAction("Click Me") {
                             Snackbar
                                     .make(itemView,
-                                            "You clicked the button on snack bar",
+                                            "This is an even numbered cell",
                                             Snackbar.LENGTH_SHORT).show()
                         }.show()
             }
